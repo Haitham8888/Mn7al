@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منحل - نظام مراقبة درجة الحرارة</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐝 نظام المنحل الذكي 🍯</h1>
+            <p class="subtitle">نظام متكامل لمراقبة وإدارة المناحل</p>
+        </div>
+
+        <div class="hive-grid">
+            <!-- معلومات خلية النحل -->
+            <div class="hive-card">
+                <h2>حالة خلية النحل</h2>
+                <div class="temp-display">
+                    <span id="internal-temp">--</span>°C
+                </div>
+                <div id="internal-status" class="status normal">مثالية</div>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div>الرطوبة</div>
+                        <div id="internal-humidity">--%</div>
+                    </div>
+                    <div class="detail-item">
+                        <div>إنتاج العسل</div>
+                        <div id="honey-production">جيد</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلومات صحة النحل -->
+            <div class="hive-card health-card">
+                <h2>صحة النحل</h2>
+                <div class="queen-status">
+                    <span class="status-icon">👑</span>
+                    <div>حالة الملكة: <span id="queen-status">نشطة</span></div>
+                </div>
+                <div class="colony-stats">
+                    <div class="stat-item">
+                        <div>قوة المستعمرة</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div>نشاط التلقيح</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم التنبيهات والإحصائيات -->
+        <div class="stats-section">
+            <h2>إحصائيات المنحل</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🍯</div>
+                    <div class="stat-value">12.5 كجم</div>
+                    <div class="stat-label">إنتاج العسل الشهري</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌺</div>
+                    <div class="stat-value">85%</div>
+                    <div class="stat-label">نسبة التلقيح</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚕️</div>
+                    <div class="stat-value">ممتازة</div>
+                    <div class="stat-label">الصحة العامة</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/hiveMonitor.js"></script>
+    <script src="js/weatherService.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
